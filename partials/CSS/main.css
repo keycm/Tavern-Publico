@@ -1,0 +1,1450 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Mada:wght@300;400;500;600;700&display=swap');
+
+/* General Resets and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll for wide elements */
+}
+
+body {
+    font-family: 'Mada', sans-serif; /* Default body font set to Mada */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    -webkit-font-smoothing: antialiased; /* For smoother font rendering */
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 94px; /* Matches the height of the .main-header to prevent content overlap */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* Reusable Components */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.95em;
+    font-family: 'Mada', sans-serif;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+.btn-secondary:hover {
+    background-color: #1d1c1c;
+    border-color: #1d1b1b;
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    padding: 12px 25px;
+    margin-top: 25px;
+}
+
+.btn-outline-dark:hover {
+    background-color: #eee;
+}
+
+.btn-outline-white {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 14px 30px;
+    margin: 10px;
+}
+
+.btn-outline-white:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.common-padding {
+    padding: 80px 0;
+}
+
+h2 {
+    font-family: 'Mada', sans-serif;
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #222;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    max-width: 1530px;
+    height: 90px;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 25px;
+}
+
+/* Logo Container - stacks the main line and the EST year */
+.logo {
+    display: flex;
+    flex-direction: column; /* Stacks the Tavern Publico line and EST year */
+    align-items: center; /* Centers items horizontally within the logo container */
+    gap: 0;
+}
+
+/* New: Wrapper for the "Tavern Publico" text (no image now) */
+.logo-main-line {
+    display: flex; /* Kept for potential future use or if you add something else */
+    align-items: center;
+}
+
+/* "Tavern Publico" text in header */
+.logo-main-line span {
+    font-family: 'Madimi One', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    color: #000;
+}
+
+/* "EST ★ 2024" in header */
+.est-year {
+    font-family: 'Mada', sans-serif;
+    font-size: 0.7em;
+    opacity: 1;
+    font-weight: 400;
+    color: #333;
+    margin-top: 2px; /* Small space below the "Tavern Publico" line */
+}
+
+/* Navigation Links - Mada, 23px */
+.main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.main-nav a {
+    font-family: 'Mada', sans-serif;
+    font-size: 23px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Sign In/Sign Up Button */
+.header-button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Mada', sans-serif;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* New: Slideshow Container to hold all slides */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Important for hiding overflowing slides */
+}
+
+/* Individual Slides */
+.mySlides {
+    display: none; /* Hidden by default, JavaScript will control visibility */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text {
+    text-align: center;
+    color: #FFD700;
+    padding: 20px;
+    position: relative; /* Needed for animation if applied to text */
+    z-index: 10; /* Ensure text is above overlay */
+}
+
+.hero-logo-large {
+    width: 220px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+/* "TAVERN PUBLICO" in hero - Madimi One */
+.hero-text h1 {
+    font-family: 'Madimi One', sans-serif;
+    font-size: 4.8em;
+    margin-bottom: 15px;
+    letter-spacing: 7px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* "EST ★ 2024" in hero - Mada */
+.est-year-hero {
+    font-family: 'Mada', sans-serif;
+    font-size: 1.2em;
+    opacity: 0.9;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Optional: Dots for navigation */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Ensure text is above overlay */
+.hero-logo-large, .hero-text h1, .est-year-hero {
+    position: relative;
+    z-index: 2;
+}
+
+/* Reserve Now Section */
+.reserve-now-section {
+    background-color: #fefefe;
+    text-align: center;
+}
+
+.reserve-now-section p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Specialties Section */
+.specialties-section {
+    background-color: #fefefe;
+    text-align: center;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 50px;
+    justify-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Specialty Card Dimensions */
+.specialty-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 390px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.specialty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.specialty-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Specialty card h3 - Mada */
+.specialty-card h3 {
+    font-family: 'Mada', sans-serif;
+    font-size: 1.5em;
+    margin: 0 25px 12px;
+    color: #222;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Specialty card p - Mada */
+.specialty-card p {
+    font-family: 'Mada', sans-serif;
+    font-size: 0.95em;
+    color: #555;
+    margin: 0 25px 20px;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.price-arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+/* Price text - Mada */
+.price {
+    font-family: 'Mada', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #333;
+}
+
+.arrow {
+    font-size: 1.6em;
+    color: #777;
+    cursor: pointer;
+}
+
+/* Our Story Section */
+.our-story-section {
+    background-color: #f4f4f4;
+}
+
+/* Adjust the main heading of the section to be left-aligned */
+.our-story-section h2 {
+    font-family: 'Mada', sans-serif;
+    text-align: left; /* ALIGNS THE HEADING TO THE LEFT */
+    margin-bottom: 60px;
+    font-size: 2.8em; /* Keeping original h2 font size */
+    color: #222;
+    font-weight: 700;
+    line-height: 1.2;
+    /* To align with .container's inner content (padding: 0 25px), apply similar padding */
+    padding-left: 25px;
+    padding-right: 25px; /* Maintain consistent padding on both sides */
+    max-width: 1200px; /* Keep it constrained like the container */
+    margin-left: auto;   /* These two margins, with max-width, effectively center the h2 block */
+    margin-right: auto;  /* This ensures it moves to the left *within* the centered container area when content is left-aligned below */
+}
+
+.story-content {
+    display: flex;
+    justify-content: flex-start; /* ALIGNS THE IMAGE AND TEXT BLOCK TO THE LEFT */
+    align-items: flex-start;    /* Aligns items to the top if they have different heights */
+    gap: 60px;
+    flex-wrap: wrap;
+    /* Push the entire story-content block to the left within its parent .container */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Ensure it respects the container's max-width */
+    padding: 0 25px; /* Apply container's padding directly to this block for alignment */
+}
+
+.story-image {
+    flex: none; /* Remove flex basis as we're setting fixed dimensions */
+    min-width: unset; /* Remove min-width */
+    max-width: unset; /* Remove max-width */
+    width: 598px;      /* Set the container's width */
+    height: 443px;     /* Set the container's height */
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.story-image img {
+    width: 100%;       /* Make the image fill its parent container's width */
+    height: 100%;      /* Make the image fill its parent container's height */
+    object-fit: cover; /* Ensures the image covers the specified area, cropping if necessary */
+    border-radius: 10px; /* Keep consistent border-radius */
+}
+
+.story-text {
+    flex: 1.5;
+    min-width: 350px; /* Maintain responsiveness for text on smaller screens */
+    text-align: left; /* Ensure the text content within this column is left-aligned */
+}
+
+/* Ensure the h2 inside the story-text is also left-aligned */
+.story-text h2 {
+    font-family: 'Mada', sans-serif;
+    text-align: left; /* Keep this specific alignment for the heading within the text block */
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Our Story p - Mada - Adjusted to 21px font size */
+.story-text p {
+    font-family: 'Mada', sans-serif;
+    margin-bottom: 18px;
+    line-height: 1.8;
+    color: #444;
+    font-size: 21px; /* Adjusted to 21 pixels */
+}
+
+/* Upcoming Events Section */
+.upcoming-events-section {
+    background-color: #fefefe;
+    text-align: center;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 29px;
+    margin-bottom: 50px;
+}
+
+.event-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Event date - Mada */
+.event-card .event-date {
+    font-family: 'Mada', sans-serif;
+    font-size: 0.9em;
+    color: #777;
+    margin: 0 25px 8px;
+    font-weight: 400;
+}
+
+/* Event h3 - Mada */
+.event-card h3 {
+    font-family: 'Mada', sans-serif;
+    font-size: 1.4em;
+    margin: 0 25px 12px;
+    color: #222;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Event p - Mada */
+.event-card p {
+    font-family: 'Mada', sans-serif;
+    font-size: 0.95em;
+    color: #555;
+    margin: 0 25px 20px;
+    min-height: 65px;
+    line-height: 1.7;
+}
+
+/* Learn More link - Mada */
+.event-card .learn-more {
+    font-family: 'Mada', sans-serif;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    font-size: 0.95em;
+}
+
+.event-card .learn-more:hover {
+    color: #555;
+}
+
+/* Guest Testimonials Section */
+.guest-testimonials-section {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 29px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 35px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Testimonial stars - Mada (as default body font) */
+.testimonial-card .stars {
+    font-family: 'Mada', sans-serif;
+    color: #f8ce0b;
+    font-size: 1.3em;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+/* Testimonial p - Mada */
+.testimonial-card p {
+    font-family: 'Mada', sans-serif;
+    font-style: italic;
+    margin-bottom: 25px;
+    color: #444;
+    line-height: 1.7;
+    font-size: 1em;
+}
+
+.guest-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.guest-info img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eee;
+}
+
+.guest-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Guest name - Mada */
+.guest-name {
+    font-family: 'Mada', sans-serif;
+    font-weight: 700;
+    color: #222;
+    font-size: 1.1em;
+}
+
+/* Guest title - Mada */
+.guest-title {
+    font-family: 'Mada', sans-serif;
+    font-size: 0.88em;
+    color: #777;
+    font-weight: 400;
+}
+
+/* Call to Action Section */
+.call-to-action-section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* CTA h2 - Mada */
+.cta-content h2 {
+    font-family: 'Mada', sans-serif;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* CTA p - Mada */
+.cta-content p {
+    font-family: 'Mada', sans-serif;
+    max-width: 850px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+    opacity: 0.95;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #1a1a1a;
+    color: #bbb;
+    padding: 60px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 29px;
+    align-items: start;
+}
+
+.footer-about img {
+    height: 35px;
+    margin-bottom: 12px;
+}
+
+/* "Tavern Publico" in footer - Madimi One */
+.footer-about p:first-of-type {
+    font-family: 'Madimi One', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+/* Other text in footer-about (e.g., EST 2024) - Mada */
+.footer-about p {
+    font-family: 'Mada', sans-serif;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-size: 0.95em;
+    font-weight: 400;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+/* Footer links - Mada */
+.footer-links a {
+    font-family: 'Mada', sans-serif;
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    font-size: 0.95em;
+    font-weight: 400;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Footer contact/hours p - Mada */
+.footer-contact p, .footer-hours p {
+    font-family: 'Mada', sans-serif;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 0.95em;
+    font-weight: 400;
+}
+
+/* Footer headings (Quick Links, Contact Us, Hours) - Mada */
+.footer-contact h3, .footer-hours h3, .footer-links h3 {
+    font-family: 'Mada', sans-serif;
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* Modal Styles - REVISED FOR CLEAN TRANSITIONS AND SIZE ADJUSTMENT */
+.modal {
+    display: none; /* Hidden by default; JS will set to 'flex' */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    /* This is the main container for both panels */
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-width: 500px; /* Consistent width as per your design */
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Hide overflowing panels during transition */
+    min-height: 600px; /* Adjusted to fit content better */
+    display: block;
+    padding: 0;
+}
+
+/* Close Button - positioned relative to modal-content */
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.close-button:hover, .close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* --- COMMON STYLES FOR ALL MODAL PANELS (Sign In & Sign Up) --- */
+.modal-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* These properties define the visual box of the panel */
+    padding: 35px 30px; /* Adjusted padding for better fit */
+    background-color: #fefefe;
+    box-sizing: border-box;
+    /* Transition properties for showing/hiding */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    text-align: center;
+}
+
+.modal-panel.active {
+    /* Styles for the currently visible panel */
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+
+
+/* Modal Header Logo (image) - Applies to both panels */
+.modal-header-logo {
+    margin-bottom: 25px;
+}
+
+.modal-header-logo img {
+    max-width: 70px; /* Adjust size of modal logo */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the logo image */
+}
+
+/* Modal Headings and Text - Applies to both panels */
+.modal-content h2 {
+    /* Targeting h2 inside modal-content for general styling */
+    font-family: 'Mada', sans-serif;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal-subtext {
+    /* Applies to subtext in both panels */
+    font-family: 'Mada', sans-serif;
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modal-subtext a, .modal-bottom-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.modal-subtext a:hover, .modal-bottom-text a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Form Styling - Applies to forms within both panels */
+.modal-form {
+    text-align: left; /* Align form labels/inputs to the left */
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Mada', sans-serif;
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Mada', sans-serif;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.modal-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.modal-bottom-text {
+    font-family: 'Mada', sans-serif;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Navigation Active Link Indicator */
+.main-nav ul li a {
+    position: relative; /* Needed for positioning the pseudo-element */
+    padding-bottom: 8px; /* Adjust space for the underline */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    background-color: #000000; /* Gold/Orange color for the line */
+    transform: scaleX(0); /* Hidden by default */
+    transform-origin: bottom right; /* Animation origin for reveal */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.main-nav ul li a.active-nav-link::after,
+.main-nav ul li a:hover::after {
+    transform: scaleX(1); /* Reveal on active or hover */
+    transform-origin: bottom left; /* Animation origin for reveal */
+}
+
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1024px) {
+    .main-nav ul {
+        gap: 25px;
+    }
+
+    .main-nav a {
+        font-size: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 4em;
+    }
+
+    .specialties-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .story-image {
+        width: 100%;
+        max-width: 598px; /* Maintain aspect ratio */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .story-text h2 {
+        text-align: center;
+    }
+
+    .story-text p {
+        text-align: center;
+    }
+
+    .btn-outline-dark {
+        margin: 25px auto 0 auto; /* Center the button */
+        display: block;
+        width: fit-content;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3em;
+        letter-spacing: 4px;
+    }
+
+    .est-year-hero {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .specialties-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specialty-card {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .story-text p {
+        font-size: 18px;
+    }
+
+    .events-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-about, .footer-links, .footer-contact, .footer-hours {
+        margin-bottom: 30px;
+    }
+
+    .footer-about img {
+        margin: 0 auto 12px auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+        display: flex;
+    }
+
+    .modal-content {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2em;
+        letter-spacing: 2px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .specialty-card {
+        padding-bottom: 15px;
+    }
+
+    .specialty-card h3 {
+        font-size: 1.3em;
+        margin: 0 15px 10px;
+    }
+
+    .specialty-card p {
+        font-size: 0.85em;
+        margin: 0 15px 15px;
+    }
+
+    .price-arrow {
+        padding: 0 15px;
+    }
+
+    .story-text p {
+        font-size: 16px;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8em;
+    }
+
+    .cta-content p {
+        font-size: 1em;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-outline-white {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Reserve Now Page Specific Hero Section */
+.reserve-hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Adjust height as needed for your design */
+    overflow: hidden;
+    background-color: #000; /* Fallback background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserve-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area */
+    opacity: 0.7; /* Adjust transparency as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.reserve-hero-overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.reserve-hero-text h1 {
+    font-family: 'Madimi One', sans-serif;
+    font-size: 3.5em; /* Adjust size for the hero text */
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #FFD700; /* Gold color for heading */
+}
+
+.reserve-hero-text p {
+    font-family: 'Mada', sans-serif;
+    font-size: 1.2em;
+    opacity: 0.9;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+}
+
+/* Responsive adjustments for the reserve hero section */
+@media (max-width: 992px) {
+    .reserve-hero-section {
+        height: 50vh;
+    }
+    .reserve-hero-text h1 {
+        font-size: 2.8em;
+        letter-spacing: 3px;
+    }
+    .reserve-hero-text p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .reserve-hero-section {
+        height: 40vh;
+    }
+    .reserve-hero-text h1 {
+        font-size: 2.2em;
+        letter-spacing: 2px;
+    }
+    .reserve-hero-text p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .reserve-hero-section {
+        height: 30vh;
+    }
+    .reserve-hero-text h1 {
+        font-size: 1.8em;
+        letter-spacing: 1px;
+    }
+    .reserve-hero-text p {
+        font-size: 0.8em;
+    }
+}
+
+/* Notification Bell Styles */
+.user-profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-button {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    top: 5px; /* Adjust vertical alignment */
+}
+
+.notification-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #e74c3c; /* Red color for new notifications */
+    color: rgb(16, 16, 16);
+    font-size: 0.7rem;
+    border-radius: 50%;
+    padding: 3px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 18px;
+    height: 18px;
+    font-weight: bold;
+}
+
+.notification-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    right: 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #111111;
+}
+
+.notification-dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #010101;
+}
+
+.notification-dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.notification-dropdown-content a:hover {
+    background-color: #000000;
+}
+
+.notification-dropdown-content.show {
+    display: block;
+}
+
+.no-notifications {
+    text-align: center;
+    color: #131313;
+    padding: 10px;
+}
+
+.notification-bell {
+    font-size: 1.5em;
+    color: #000000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative; /* This is crucial for positioning the dot */
+}
+
+.notification-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #f44336; /* Red color */
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute; /* Position the dot relative to its parent */
+    top: -2px;
+    right: -2px;
+    border: 2px solid #222831; /* Adds a border that matches the header background */
+}
+
+.notification-bell:hover {
+    color: #fff;
+}
+
+
+/* --- New Mobile Navigation Styles --- */
+
+/* Body class to prevent scrolling when nav is open */
+.no-scroll {
+    overflow: hidden;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Mobile Nav Toggle (Burger Icon) */
+.mobile-nav-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000; /* Ensure it's above other header content */
+    padding: 10px;
+}
+
+.mobile-nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Burger to "X" animation */
+.mobile-nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.mobile-nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* --- Responsive Breakpoint for Mobile Nav --- */
+@media (max-width: 992px) { /* Adjust this breakpoint if needed */
+
+    /* Show the burger icon */
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    /* Style the mobile navigation panel */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 1999;
+        transition: right 0.4s ease-in-out;
+        padding-top: 120px; /* Space for logo/close button */
+    }
+
+    /* Active state for the navigation panel */
+    .main-nav.nav-open {
+        right: 0; /* Slide in */
+    }
+
+    /* Style the links for vertical layout */
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .main-nav a {
+        font-size: 1.5em; /* Larger text for mobile */
+        font-weight: 600;
+    }
+    
+    /* Hide the non-burger login/logout buttons in the header right area */
+    .header-right {
+        display: none;
+    }
+
+    /* Adjust body padding to account for the fixed header height */
+    body {
+        padding-top: 94px; /* Reset to original value */
+    }
+}
